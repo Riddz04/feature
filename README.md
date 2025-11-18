@@ -373,6 +373,46 @@ The Agents framework is under active development in a rapidly evolving field. We
 </tbody>
 </table>
 
+## Filler Interruption Handler
+
+### What Changed
+Overview of new modules, params, and logic added:
+- **FillerInterruptionHandler**: Core module that detects filler words and classifies interruptions
+- **EnhancedAgentSession**: Wrapper around AgentSession that integrates the filler handler
+- **Enhanced Voice Agent Example**: Demonstrates usage with function tools
+- **Comprehensive Test Suite**: All 6 tests passing, covering filler-only, genuine, mixed, short speech, and cooldown scenarios
+
+### What Works
+Features verified through manual or automated testing:
+- Filters filler words only when agent is speaking
+- Allows genuine interruptions at any time  
+- Configurable ignored words list
+- Cooldown mechanism to prevent rapid-fire interruptions
+- Minimum speech duration filter
+- Detailed logging and statistics
+- Language-agnostic design
+- No modifications to core LiveKit SDK
+
+### Known Issues
+Any edge cases or instability observed:
+- None currently identified
+
+### Steps to Test
+How to start the agent and verify filler vs. real speech handling:
+1. Install dependencies: `pip install -r requirements.txt`
+2. Run tests: `python -m pytest tests/ -v`
+3. Start enhanced agent: `python examples/enhanced_voice_agent.py`
+4. Test filler words (um, uh, like) while agent is speaking - should be ignored
+5. Test genuine interruptions (actual questions) while agent is speaking - should trigger interruption
+
+### Environment Details
+Python version, dependencies, and config instructions:
+- **Python Version**: 3.8+
+- **Dependencies**: livekit-agents, pytest (for testing)
+- **Configuration**: 
+  - Set `LIVEKIT_URL`, `LIVEKIT_API_KEY`, `LIVEKIT_API_SECRET` environment variables
+  - Optional: Configure filler words list and cooldown duration in FillerInterruptionHandler
+
 <h3>Riddhi Dhawan</h3>
 <h4>Netaji Subhash Univesity of Technology - 2027 batch</h4>
 <!--END_REPO_NAV-->
