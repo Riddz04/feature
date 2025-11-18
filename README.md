@@ -372,4 +372,7 @@ The Agents framework is under active development in a rapidly evolving field. We
 <tr><td>Resources</td><td><a href="https://docs.livekit.io">Docs</a> · <a href="https://github.com/livekit-examples">Example apps</a> · <a href="https://livekit.io/cloud">Cloud</a> · <a href="https://docs.livekit.io/home/self-hosting/deployment">Self-hosting</a> · <a href="https://github.com/livekit/livekit-cli">CLI</a></td></tr>
 </tbody>
 </table>
+
+<h3>Riddhi Dhawan</h3>
+<h4>Netaji Subhash Univesity of Technology - 2027 batch</h4>
 <!--END_REPO_NAV-->
